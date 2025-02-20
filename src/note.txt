@@ -1,0 +1,24 @@
+useId()
+useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
+- Don't call useId to generate keys in a list
+
+
+
+always use key when writing code in jsx file, without it performance will be dead  : remember the key in react
+while using loop
+{currencyOptions.map((currency)=>(
+    <option key={currency} value={currency}>   
+        {currency}
+    </option>
+))}
+
+
+
+'onCurrencyChange' is undefined it will not be executed | as we know undefined is false
+if 'onCurrencyChange' is defined then only call the 'onCurrencyChange' : && operator ensures `onCurrencyChange` is defined before calling it 
+onChange={(e)=> onCurrencyChange && onCurrencyChange(e.target.value)}  // changing the currency in 'state' in App.jsx
+
+
+
+
+const options = Object.keys(currencyInfo)   //value inside options are in array form
